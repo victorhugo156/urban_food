@@ -1,0 +1,332 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Accessibility Classes */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Accessibility Widget */
+.accessibility-widget {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.accessibility-widget button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Layout */
+.landing-container {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    min-height: 100vh;
+}
+
+.landing-content-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Left Section */
+.landing-container > div[role="banner"],
+.announcement,
+.subscription-form,
+.contact-info {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Logo and Main Content */
+.logo {
+    max-width: 120px;
+    margin-bottom: 40px;
+}
+
+
+
+.announcement {
+    margin-bottom: 40px;
+}
+
+.announcement h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.announcement p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Form Styles */
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.subscribe-btn {
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Contact Info and Social Links */
+.contact-info {
+    margin-top: auto; /* Pushes the contact info to the bottom */
+    padding-bottom: 40px;
+}
+
+.contact-info p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-link img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+/* Make WhatsApp logo bigger */
+.social-link:first-child img {
+    width: 42px;  /* Bigger than other icons */
+    height: 42px;
+}
+
+/* Optional: Add a subtle hover effect */
+.social-link:first-child:hover img {
+    transform: scale(1.1);
+}
+
+/* Keep other social icons at original size */
+.social-link:not(:first-child) img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Right Section */
+
+.landing-content-right{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.food-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Accessibility Menu - Positioned on top right */
+.accessibility-nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Keep existing accessibility menu styles */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landing-container {
+        flex-direction: column;
+    }
+
+    .landing-container > div[role="banner"],
+    .announcement,
+    .subscription-form,
+    .contact-info {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .featured-image {
+        width: 100%;
+        height: 300px; /* Fixed height for mobile */
+    }
+
+    #main-heading {
+        font-size: 2rem;
+    }
+
+    .announcement h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Animation for better UX */
+.subscribe-btn,
+.social-link,
+.accessibility-toggle {
+    transition: transform 0.2s ease;
+}
+
+.subscribe-btn:hover,
+.social-link:hover,
+.accessibility-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* Focus states for accessibility */
+input:focus,
+button:focus,
+a:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+/* Add these new accessibility feature styles */
+
+/* High Contrast Mode */
+.high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast p,
+.high-contrast input,
+.high-contrast button {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.high-contrast input {
+    border: 2px solid #fff !important;
+}
+
+.high-contrast .subscribe-btn {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+/* Light Background Mode */
+.light-background {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.light-background h1,
+.light-background h2,
+.light-background p,
+.light-background input,
+.light-background button {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.light-background input {
+    border: 2px solid #000 !important;
+}
+
+/* Links Underline */
+.underline-links a {
+    text-decoration: underline !important;
+}
+
+/* Readable Font */
+.readable-font,
+.readable-font h1,
+.readable-font h2,
+.readable-font p,
+.readable-font input,
+.readable-font button {
+    font-family: Arial, sans-serif !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Ensure text sizing affects all text elements */
+.landing-container {
+    transition: font-size 0.3s ease;
+}
+
+.landing-container h1,
+.landing-container h2,
+.landing-container p,
+.landing-container input,
+.landing-container button {
+    transition: all 0.3s ease;
+}
+
+/* Update existing styles to ensure proper inheritance */
+#main-heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.announcement h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.announcement p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Rest of your existing CSS remains the same */

@@ -1,0 +1,24 @@
+
+
+  You are an expert in JavaScript and Web UI development.
+  
+  Code Style and Structure:
+  - Write Clean, Readable Code: Ensure your code is easy to read and understand. Use descriptive names for variables and functions.
+
+
+  Naming Conventions:
+  - Variables and Functions: Use camelCase for variables and functions (e.g., isFetchingData, handleUserInput).
+  - Components: Use PascalCase for component names (e.g., UserProfile, ChatScreen).
+  - Directories: Use lowercase and hyphenated names for directories (e.g., user-profile, chat-screen).
+
+  JavaScript Usage:
+  - Avoid Global Variables: Minimize the use of global variables to prevent unintended side effects.
+  - Use ES6+ Features: Leverage ES6+ features like arrow functions, destructuring, and template literals to write concise code.
+  - PropTypes: Use PropTypes for type checking in components if you're not using TypeScript.
+
+
+  UI and Styling:
+  - Consistent Styling: Use StyleSheet.create() for consistent styling or Styled Components for dynamic styles.
+  - Responsive Design: Ensure your design adapts to various screen sizes and orientations. Consider using responsive units.
+
+    

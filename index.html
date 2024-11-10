@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Urban Food - Coming Soon! Special offers for delicious bites at your doorstep">
+    <title>Urban Food | Coming Soon</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="accessibility.js" defer></script>
+</head>
+
+<body>
+    <!-- Main Content Section -->
+    <main role="main" class="landing-container">
+        <section class="landing-content-left">
+                    <!-- Logo Section -->
+        <div role="banner">
+            <img src="./src/urban_food_logo_small.png" alt="Urban Food Logo" class="logo">
+        </div>
+        <h1 id="main-heading">GUESS WHO IS BACK</h1>
+        <div class="announcement">
+            <h2>COMING SOON</h2>
+            <p>After all these years of break, we're getting back and bringing a special offer just for you! Get
+                ready for delicious bites right at your doorstep.</p>
+        </div>
+
+        <!-- Subscription Form -->
+        <form class="subscription-form" action="/subscribe" method="POST">
+            <div class="form-group">
+                <label for="name" class="visually-hidden">Name</label>
+                <input type="text" id="name" name="name" placeholder="TYPE YOUR NAME" required aria-required="true">
+            </div>
+            <div class="form-group">
+                <label for="email" class="visually-hidden">Email</label>
+                <input type="email" id="email" name="email" placeholder="TYPE YOUR EMAIL" required
+                    aria-required="true">
+            </div>
+            <button type="submit" class="subscribe-btn">SUBSCRIBE</button>
+        </form>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <p>Have any questions? Feel free to contact us via WhatsApp or reach us out via our social media
+                platforms</p>
+            <div class="social-links" role="list">
+                <a href="#" aria-label="Contact us on WhatsApp" class="social-link">
+                    <img src="./src/whatsapp-logo.svg" alt="" aria-hidden="true">
+                </a>
+                <a href="#" aria-label="Follow us on Instagram" class="social-link">
+                    <img src="/src/instagram-logo.svg" alt="" aria-hidden="true">
+                </a>
+                <a href="#" aria-label="Follow us on Facebook" class="social-link">
+                    <img src="./src/facebook-logo.svg" alt="" aria-hidden="true">
+                </a>
+            </div>
+        </div>
+        </section>
+
+        <!-- Right section with accessibility menu inside -->
+        <section class="landing-content-right" role="complementary">
+            <!-- Move accessibility menu here -->
+            <nav class="accessibility-nav" role="navigation" aria-label="Accessibility menu">
+                <button class="accessibility-toggle" aria-expanded="false" aria-controls="accessibility-menu">
+                    <span class="visually-hidden">Toggle Accessibility Menu</span>
+                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z"/>
+                        <path d="M12 6c-3.313 0-6 2.687-6 6s2.687 6 6 6 6-2.687 6-6-2.687-6-6-6z"/>
+                    </svg>
+                </button>
+                <div id="accessibility-menu" class="accessibility-menu" hidden>
+                    <ul role="menu">
+                        <li role="none">
+                            <button role="menuitem" aria-label="Increase Text Size">
+                                <span class="icon">🔍+</span>
+                                Increase Text
+                            </button>
+                        </li>
+                        <li role="none">
+                            <button role="menuitem" aria-label="Decrease Text Size">
+                                <span class="icon">🔍-</span>
+                                Decrease Text
+                            </button>
+                        </li>
+                        <li role="none">
+                            <button role="menuitem" aria-label="Toggle High Contrast">
+                                <span class="icon">◐</span>
+                                High Contrast
+                            </button>
+                        </li>
+                        <li role="none">
+                            <button role="menuitem" aria-label="Toggle Light Background">
+                                <span class="icon">💡</span>
+                                Light Background
+                            </button>
+                        </li>
+                        <li role="none">
+                            <button role="menuitem" aria-label="Toggle Links Underline">
+                                <span class="icon">⎁</span>
+                                Links underline
+                            </button>
+                        </li>
+                        <li role="none">
+                            <button role="menuitem" aria-label="Toggle Readable Font">
+                                <span class="icon">Aa</span>
+                                Readable Font
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <img src="path-to-food-image.jpg" alt="Delicious golden-brown cheese balls in a terracotta bowl"
+                class="food-image">
+        </section>
+    </main>
+</body>
+
+</html>
