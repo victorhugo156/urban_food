@@ -154,6 +154,7 @@ body{
 
 /* Accessibility Menu - Positioned on top right */
 .accessibility-nav {
+    background-color: aqua;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -161,7 +162,16 @@ body{
 }
 
 .accessibility-toggle{
+    width: 60px;
+    height: 60px;
+
     background-color: rgb(0, 102, 255);
+    border: none;
+    text-decoration: none;
+
+    margin-right: 3px;
+
+
 }
 
 .ph-person-simple-circle{
@@ -169,10 +179,15 @@ body{
     color: white;
 }
 
+.accessibility-nav{
+    display: flex;
+}
+
 .accessibility-menu{
+    background-color: white;
+
     width: 250px;
     height: 300px;
-    background-color: white;
 }
 .accessibility-menu ul{
     width: 100%;
@@ -184,6 +199,7 @@ body{
 
     padding: 20px;
 }
+
 .btnMenu{
     font-size: 20px;
 }
