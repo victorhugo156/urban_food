@@ -29,26 +29,42 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuItems = menu.querySelectorAll('button[role="menuitem"]');
     
     let currentTextSize = 100;
+
+    // Increase or Decrease Text Size for All Elements
+function changeTextSize(increase = true) {
+    const elements = document.querySelectorAll('.landing-container h1, .landing-container h2, .landing-container p, .landing-container input, .landing-container button');
+
+    elements.forEach(element => {
+        const currentFontSize = parseFloat(getComputedStyle(element).fontSize);
+        const newSize = increase ? currentFontSize * 1.1 : currentFontSize * 0.9;
+
+        element.style.fontSize = `${newSize}px`;
+    });
+}
+
+document.querySelector('.btnMenuOption[aria-label="Increase Text Size"]').addEventListener('click', () => changeTextSize(true));
+document.querySelector('.btnMenuOption[aria-label="Decrease Text Size"]').addEventListener('click', () => changeTextSize(false));
     
     menuItems.forEach(item => {
         item.addEventListener('click', () => {
             const action = item.getAttribute('aria-label');
             
             switch(action) {
-                case 'Increase Text Size':
-                    if (currentTextSize < 200) {
-                        currentTextSize += 10;
-                        document.querySelector('.landing-container').style.fontSize = `${currentTextSize}%`;
-                        announceChange('Text size increased');
-                    }
-                    break;
-                case 'Decrease Text Size':
-                    if (currentTextSize > 70) {
-                        currentTextSize -= 10;
-                        document.querySelector('.landing-container').style.fontSize = `${currentTextSize}%`;
-                        announceChange('Text size decreased');
-                    }
-                    break;
+                // case 'Increase Text Size':
+                //     if (currentTextSize < 200) {
+                //         currentTextSize += 10;
+                //         document.querySelector('.landing-container').style.fontSize = `${currentTextSize}%`;
+                //         announceChange('Text size increased');
+                //     }
+                //     break;
+                // case 'Decrease Text Size':
+                //     if (currentTextSize > 70) {
+                //         currentTextSize -= 10;
+                //         document.querySelector('.landing-container').style.fontSize = `${currentTextSize}%`;
+                //         announceChange('Text size decreased');
+                //     }
+                //     break;
+
                 case 'Toggle High Contrast':
                     document.querySelector('.landing-container').classList.toggle('high-contrast');
                     announceChange('High contrast toggled');

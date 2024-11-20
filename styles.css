@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+    
 }
 
 /* Accessibility Classes */
@@ -28,11 +30,12 @@ body{
     background-color: aliceblue;
     display: flex;
     justify-content: center;
-    width: 70%;
+    width: 90%;
     min-height: 100vh;
 }
 
 .landing-content-left{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,7 +48,7 @@ body{
 .subscription-form,
 .contact-info {
     width: 50%;
-    padding: 40px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -56,31 +59,53 @@ body{
     margin-bottom: 40px;
 }
 
+#main-heading{
+    font-size: 5rem;
+}
+
 .announcement {
-    margin-bottom: 40px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 5px;
+
 }
 
 .announcement h2 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
 }
 
 .announcement p {
+    font-family: "Roboto";
     font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+
     line-height: 1.6;
-    margin-bottom: 40px;
 }
 
 /* Form Styles */
 .subscription-form {
+    width: 70%;
+
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    max-width: 400px;
-    margin-bottom: 40px;
+
+    margin-bottom: 5px;
+}
+.form-group{
+    width: 100%;
 }
 
 .form-group input {
+    
     width: 100%;
     padding: 15px;
     border: 1px solid #ddd;
@@ -89,6 +114,10 @@ body{
 }
 
 .subscribe-btn {
+    background-color: #000;
+    color: white;
+    width: 150px;
+
     padding: 15px;
     border: none;
     border-radius: 4px;
@@ -100,13 +129,25 @@ body{
 
 /* Contact Info and Social Links */
 .contact-info {
-    margin-top: auto; /* Pushes the contact info to the bottom */
-    padding-bottom: 40px;
+    width: 85%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
 }
 
 .contact-info p {
-    font-size: 0.9rem;
-    margin-bottom: 20px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1.2rem;
+
+    text-align: center;
+
+    line-height: 1.6;
+
+    margin-bottom: 10px;
 }
 
 .social-links {
@@ -142,19 +183,20 @@ body{
 
 .landing-content-right{
     width: 100%;
+    height: 100vh;
     text-align: center;
     position: relative;
 }
 
 .food-image {
-    width: 100%;
+    width: 800px;
     height: 100%;
+
     object-fit: cover;
 }
 
 /* Accessibility Menu - Positioned on top right */
 .accessibility-nav {
-    background-color: aqua;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -216,64 +258,12 @@ body{
 }
 
 
-/* Keep existing accessibility menu styles */
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .landing-container {
-        flex-direction: column;
-    }
-
-    .landing-container > div[role="banner"],
-    .announcement,
-    .subscription-form,
-    .contact-info {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .featured-image {
-        width: 100%;
-        height: 300px; /* Fixed height for mobile */
-    }
-
-    #main-heading {
-        font-size: 2rem;
-    }
-
-    .announcement h2 {
-        font-size: 2.5rem;
-    }
-}
-
-/* Animation for better UX */
-.subscribe-btn,
-.social-link,
-.accessibility-toggle {
-    transition: transform 0.2s ease;
-}
-
-.subscribe-btn:hover,
-.social-link:hover,
-.accessibility-toggle:hover {
-    transform: scale(1.05);
-}
-
-/* Focus states for accessibility */
-input:focus,
-button:focus,
-a:focus {
-    outline: 2px solid #000;
-    outline-offset: 2px;
-}
-
-/* Add these new accessibility feature styles */
-
 /* High Contrast Mode */
+
 .high-contrast {
     background-color: #000 !important;
     color: #fff !important;
-}
+} 
 
 .high-contrast h1,
 .high-contrast h2,
@@ -291,13 +281,15 @@ a:focus {
 .high-contrast .subscribe-btn {
     background-color: #fff !important;
     color: #000 !important;
-}
+} 
+
 
 /* Light Background Mode */
+
 .light-background {
     background-color: #fff !important;
     color: #000 !important;
-}
+} */
 
 .light-background h1,
 .light-background h2,
@@ -310,12 +302,14 @@ a:focus {
 
 .light-background input {
     border: 2px solid #000 !important;
-}
+} 
+
 
 /* Links Underline */
 .underline-links a {
     text-decoration: underline !important;
 }
+
 
 /* Readable Font */
 .readable-font,
@@ -327,28 +321,142 @@ a:focus {
     font-family: Arial, sans-serif !important;
     line-height: 1.6 !important;
     letter-spacing: 0.5px !important;
+} 
+
+
+/* Keep existing accessibility menu styles */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* .landing-container {
+        flex-direction: column;
+    }
+
+    .landing-container > div[role="banner"],
+    .announcement,
+    .subscription-form,
+    .contact-info {
+        width: 100%;
+        padding: 20px;
+    } */
+
+    /* .featured-image {
+        width: 100%;
+        height: 300px; 
+    } */
+
+    /* #main-heading {
+        font-size: 2rem;
+    } */
+
+    /* .announcement h2 {
+        font-size: 2.5rem;
+    } */
 }
+
+/* Animation for better UX */
+/* .subscribe-btn,
+.social-link,
+.accessibility-toggle {
+    transition: transform 0.2s ease;
+}
+
+.subscribe-btn:hover,
+.social-link:hover,
+.accessibility-toggle:hover {
+    transform: scale(1.05);
+} */
+
+/* Focus states for accessibility */
+/* input:focus,
+button:focus,
+a:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+} */
+
+/* Add these new accessibility feature styles */
+
+/* High Contrast Mode */
+/* .high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+} */
+
+/* .high-contrast h1,
+.high-contrast h2,
+.high-contrast p,
+.high-contrast input,
+.high-contrast button {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.high-contrast input {
+    border: 2px solid #fff !important;
+}
+
+.high-contrast .subscribe-btn {
+    background-color: #fff !important;
+    color: #000 !important;
+} */
+
+/* Light Background Mode */
+/* .light-background {
+    background-color: #fff !important;
+    color: #000 !important;
+} */
+
+/* .light-background h1,
+.light-background h2,
+.light-background p,
+.light-background input,
+.light-background button {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.light-background input {
+    border: 2px solid #000 !important;
+} */
+
+/* Links Underline */
+/* .underline-links a {
+    text-decoration: underline !important;
+} */
+
+/* Readable Font */
+/* .readable-font,
+.readable-font h1,
+.readable-font h2,
+.readable-font p,
+.readable-font input,
+.readable-font button {
+    font-family: Arial, sans-serif !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0.5px !important;
+} */
 
 /* Ensure text sizing affects all text elements */
-.landing-container {
+/* .landing-container {
     transition: font-size 0.3s ease;
-}
+} */
 
-.landing-container h1,
+/* .landing-container h1,
 .landing-container h2,
 .landing-container p,
 .landing-container input,
 .landing-container button {
     transition: all 0.3s ease;
-}
+} */
 
 /* Update existing styles to ensure proper inheritance */
-#main-heading {
+/* #main-heading {
     font-size: 2.5rem;
     margin-bottom: 20px;
-}
+} */
 
-.announcement h2 {
+/* .announcement h2 {
     font-size: 3.5rem;
     margin-bottom: 20px;
 }
@@ -357,6 +465,6 @@ a:focus {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 40px;
-}
+} */
 
 /* Rest of your existing CSS remains the same */
