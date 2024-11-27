@@ -162,6 +162,10 @@ body{
     transition: transform 0.2s ease;
 }
 
+.whatsApp img{
+    color: green;
+}
+
 /* Make WhatsApp logo bigger */
 .social-link:first-child img {
     width: 42px;  /* Bigger than other icons */
