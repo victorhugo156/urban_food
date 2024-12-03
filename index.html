@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="./reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script type="module" src="firebase-script.js"></script>
     <script src="accessibility.js" defer></script>
@@ -20,6 +22,47 @@
 <body>
     <!-- Main Content Section -->
     <main role="main" class="landing-container">
+        <!-- Move accessibility menu here -->
+        <nav class="accessibility-nav mobile-nav" role="navigation" aria-label="Accessibility menu">
+            <button class="accessibility-toggle" aria-expanded="false" aria-controls="accessibility-menu">
+                <span class="visually-hidden">Toggle Accessibility Menu</span>
+                <i class="ph ph-person-simple-circle"></i>
+            </button>
+            <div id="accessibility-menu" class="accessibility-menu" hidden>
+                <ul role="menu">
+                    <li role="none" class="container-option">
+                        <span class="icon">🔍+</span>
+                        <button role="menuitem" aria-label="Increase Text Size" class="btnMenuOption">
+                            Increase Text
+                        </button>
+                    </li>
+                    <li role="none" class="container-option">
+                        <span class="icon">🔍-</span>
+                        <button role="menuitem" aria-label="Decrease Text Size" class="btnMenuOption">
+                            Decrease Text
+                        </button>
+                    </li>
+                    <li role="none" class="container-option">
+                        <span class="icon">◐</span>
+                        <button role="menuitem" aria-label="Toggle High Contrast" class="btnMenuOption">
+                            High Contrast
+                        </button>
+                    </li>
+                    <li role="none" class="container-option">
+                        <span class="icon">💡</span>
+                        <button role="menuitem" aria-label="Toggle Light Background" class="btnMenuOption">
+                            Light Background
+                        </button>
+                    </li>
+                    <li role="none" class="container-option">
+                        <span class="icon">Aa</span>
+                        <button role="menuitem" aria-label="Toggle Readable Font" class="btnMenuOption">
+                            Readable Font
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <section class="landing-content-left">
             <!-- Logo Section -->
             <div role="banner">
@@ -28,7 +71,8 @@
             <h1 id="main-heading" class="main-header" role="menuitem">GUESS WHO IS BACK</h1>
             <div class="announcement">
                 <h2 role="menuitem">COMING SOON</h2>
-                <p role="menuitem">After all these years of break, we're getting back and bringing a special offer just for you! Get
+                <p role="menuitem">After all these years of break, we're getting back and bringing a special offer just
+                    for you! Get
                     ready for delicious bites right at your doorstep.</p>
             </div>
 
@@ -51,13 +95,13 @@
                 <p>Have any questions? Feel free to contact us via WhatsApp or reach us out via our social media
                     platforms</p>
                 <div class="social-links" role="list">
-                    <a href="#" aria-label="Contact us on WhatsApp" class="social-link whatsApp">
-                        <img src="./src/whatsapp-logo.svg" alt="" aria-hidden="true">
+                    <a href="https://wa.me/+61449723285" target="_blank" aria-label="Contact us on WhatsApp" >
+                        <img src="./src/whatsapp-logo.svg" alt="" aria-hidden="true" class="whatsApp">
                     </a>
-                    <a href="#" aria-label="Follow us on Instagram" class="social-link">
+                    <a href="https://www.instagram.com/urbanfoodau/" target="_blank" Follow us on Instagram" class="social-link">
                         <img src="./src/instagram-logo.svg" alt="" aria-hidden="true">
                     </a>
-                    <a href="#" aria-label="Follow us on Facebook" class="social-link">
+                    <a href="https://www.facebook.com/urbanfoodau/" target="_blank" aria-label="Follow us on Facebook" class="social-link">
                         <img src="./src/facebook-logo.svg" alt="" aria-hidden="true">
                     </a>
                 </div>
@@ -66,57 +110,27 @@
 
         <!-- Right section with accessibility menu inside -->
         <section class="landing-content-right" role="complementary">
-            <!-- Move accessibility menu here -->
-            <nav class="accessibility-nav" role="navigation" aria-label="Accessibility menu">
-                <button class="accessibility-toggle" aria-expanded="false" aria-controls="accessibility-menu">
-                    <span class="visually-hidden">Toggle Accessibility Menu</span>
-                    <i class="ph ph-person-simple-circle"></i>
-                </button>
-                <div id="accessibility-menu" class="accessibility-menu" hidden>
-                    <ul role="menu">
-                        <li role="none" class="container-option">
-                            <span class="icon">🔍+</span>
-                            <button role="menuitem" aria-label="Increase Text Size" class="btnMenuOption">
-                                Increase Text
-                            </button>
-                        </li>
-                        <li role="none" class="container-option">
-                            <span class="icon">🔍-</span>
-                            <button role="menuitem" aria-label="Decrease Text Size" class="btnMenuOption">
-                                Decrease Text
-                            </button>
-                        </li>
-                        <li role="none" class="container-option">
-                            <span class="icon">◐</span>
-                            <button role="menuitem" aria-label="Toggle High Contrast" class="btnMenuOption">
-                                High Contrast
-                            </button>
-                        </li>
-                        <li role="none" class="container-option">
-                            <span class="icon">💡</span>
-                            <button role="menuitem" aria-label="Toggle Light Background" class="btnMenuOption">
-                                Light Background
-                            </button>
-                        </li>
-                        <li role="none" class="container-option">
-                            <span class="icon">⎁</span>
-                            <button role="menuitem" aria-label="Toggle Links Underline" class="btnMenuOption">
-                                Links underline
-                            </button>
-                        </li>
-                        <li role="none" class="container-option">
-                            <span class="icon">Aa</span>
-                            <button role="menuitem" aria-label="Toggle Readable Font" class="btnMenuOption">
-                                Readable Font
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <img src="./src/tasty-food-croquettes-bowl.jpg" alt="Delicious golden-brown cheese balls in a terracotta bowl"
-                class="food-image">
+            <img src="./src/tasty-food-croquettes-bowl.jpg"
+                alt="Delicious golden-brown cheese balls in a terracotta bowl" class="food-image">
         </section>
     </main>
+    <script>
+        // JavaScript for hiding the image on mobile devices
+        document.addEventListener('DOMContentLoaded', function() {
+            function handleResize() {
+                const foodImage = document.querySelector('.food-image');
+                if (window.innerWidth <= 768) {
+                    foodImage.style.display = 'none';
+                } else {
+                    foodImage.style.display = 'block';
+                }
+            }
+    
+            // Run on load and on resize
+            handleResize();
+            window.addEventListener('resize', handleResize);
+        });
+    </script>
 </body>
 
 </html>
