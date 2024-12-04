@@ -24,22 +24,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault(); // Prevent page reload
-
     // Get form data
-    const name = form.name.value;
-    const email = form.email.value;
+const name = form.name.value.trim();
+const email = form.email.value.trim();
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let valid = true;
 
-    try {
-      // Add a new document to Firestore
-      await addDoc(collection(db, "subscribers"), {
-        name: name,
-        email: email
-      });
-      alert("Thank you for subscribing!");
-      form.reset(); // Clear the form after successful submission
-    } catch (e) {
-      console.error("Error adding document: ", e);
-      alert("An error occurred. Please try again.");
-    }
+// Clear previous error messages
+document.querySelectorAll('.error-message').forEach(el => el.remove());
+
+// Validate Name
+if (name === '') {
+  valid = false;
+  showError('name', 'Name is required.');
+}
+
+// Validate Email
+if (email === '') {
+  valid = false;
+  showError('email', 'Email is required.');
+} else if (!emailPattern.test(email)) {
+  valid = false;
+  showError('email', 'Please enter a valid email address.');
+}
+
+if (valid) {
+  try {
+    // Add a new document to Firestore
+    await addDoc(collection(db, "subscribers"), {
+      name: name,
+      email: email
+    });
+    alert("Thank you for subscribing!");
+    form.reset(); // Clear the form after successful submission
+  } catch (e) {
+    console.error("Error adding document: ", e);
+    alert("An error occurred. Please try again.");
+  }
+}
   });
 });
